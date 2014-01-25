@@ -39,7 +39,7 @@ message "In ruby, we have a special construct called a **range**. A range gives 
 
 irb "('a'...'z').each { |letter| puts letter }"
 
-message "How is this line different from the previous example? The three dots tells us to **omit** the starting and ending points."
+message "How is this line different from the previous example? The three dots tells us to **omit** the ending point."
 end
 
 step do
