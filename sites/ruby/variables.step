@@ -53,6 +53,19 @@ step do
      far. This might be useful for when you want to see what variable names are
      already in use."
    end
+step do
+  message <<-CONTENT
+  The opposite of a variable is `constant` - a value that doesn't change. 
+  Numbers, strings, nil, true, and false are constants.  
+  Check out what happens if you assign a value to a constant."
+  CONTENT
+  irb <<-IRB
+  true = false
+  1 = 1
+  "a" = 1
+  IRB
+  message "(Notice in the last example we put the a in quotation marks to make it a string.)"
+end
 
 step do
   message "There are some rules about what you can name a variable."
