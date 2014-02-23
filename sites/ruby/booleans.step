@@ -2,7 +2,7 @@ message "George Boole was an English mathematician who specialized in logic,
 especially logic rules involving true and false.  The Boolean datatype
 is named in his honor.
 
-In code, as in life we base a lot of decisions on whether something is true or
+In code, as in life, we base a lot of decisions on whether something is true or
 false. *\"If it is raining, then I will bring an umbrella; otherwise I will wear
 sunglasses.\"*"
 
@@ -68,18 +68,24 @@ end
 
 step do
     message "We can check more than one condition with `and` and `or` . `&&` and `||` (two pipes) is another notation for `and` and `or`."
+    message "We do something like this when we Google for 'microsoft and cambridge and not seattle'"
 irb <<-IRB
+# First let's define variables:
 yes = true
 no = false
+# Now experiment.  Boolean rule 1:  AND means everything must be true. 
+# true and true are true
 yes and yes
 yes && yes
+# true and false fail the test - AND means everything must be true
 yes and no
 no and yes
 no and no
+# Boolean rule 2: OR says at least one must be true. 
 yes or no
 yes || no
+yes or yes
 IRB
-    message "We do something like this with Google when we say 'microsoft and cambridge and not seattle'"
 end
 
 
